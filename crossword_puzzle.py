@@ -1,5 +1,9 @@
 import random
 import sys
+'''
+In this project, a 10x10 crossword puzzel is created. The user gives a file with 1 word per line
+and the project checks if the words exist horizontally or vertically
+'''
 
 i, j = 10,10;
 box = [[chr(random.randrange(65,91)) for x in range(i)] for y in range(j)] # Creating a 10x10 crossword puzzle with random letters in ascii
@@ -18,7 +22,7 @@ for line in lex:
     word.remove('\n')
     i=0 
     f=False # Flag for a word finding
-    # Search horizontaly
+    # Search horizontally
     while i<10 and f==False:
         left=0 
         while left+len(line)-1<10:
